@@ -1,0 +1,17 @@
+<aside class="header">
+
+  <div class='header--logo'>
+    <a href="{{ site.baseurl }}/"><img src="/img/antlers.png"/></a>
+  </div>
+
+  <a class="header--title" href="{{ site.baseurl }}/">{{ site.title }}</a>
+
+  <nav class="header--nav">
+    {% for my_page in site.pages %}
+      {% if my_page.title %}
+      <a class="header--nav-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
+      {% endif %}
+    {% endfor %}
+  </nav>
+
+</aside>

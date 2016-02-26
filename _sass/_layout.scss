@@ -1,0 +1,83 @@
+/**
+ * Header
+ */
+.header {
+    text-align: center;
+    font-size: 2.4rem;
+}
+
+.header--title, .header--title:visited {
+    color: $color_black;
+    font-size: 2.4rem;
+}
+
+.header--logo {
+    margin: 1rem auto 0;
+    width: 10rem;
+}
+
+
+.header--nav {
+}
+
+.header--nav-link {
+    font-size: 2rem;
+    color: $color_brand;
+    display: block;
+    text-transform: uppercase;
+    font-family: $alt-font-family;
+}
+/**
+ * Page content
+ */
+.page-content {
+}
+
+.page-heading {
+}
+
+.post-meta {
+    font-style: italic;
+}
+
+.post-link {
+}
+
+/**
+ * Posts
+ */
+.post {
+    padding: $base_padding;
+    background-color: $color_post_background;
+    margin-bottom: $base_padding;
+}
+
+.post-header {
+}
+
+.post-content {
+
+    // h2 {
+    //     font-size: 32px;
+
+    //     @include media-query($on_laptop) {
+    //         font-size: 28px;
+    //     }
+    // }
+
+    // h3 {
+    //     font-size: 26px;
+
+    //     @include media-query($on_laptop) {
+    //         font-size: 22px;
+    //     }
+    // }
+
+    // h4 {
+    //     font-size: 20px;
+
+    //     @include media-query($on_laptop) {
+    //         font-size: 18px;
+    //     }
+    // }
+}
