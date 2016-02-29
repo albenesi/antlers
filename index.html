@@ -4,19 +4,25 @@ layout: default
 
 <div class="home">
 
-  <div class="post-list">
-    {% for post in site.posts %}
+  <div class="post--list">
+    {% for post in site.posts limit:10%}
 
-      <article class="post">
+      <article class="post excerpt">
 
-        <header class="post-header">
-          <a href="{{post.url}}"><h1 class="post-title" itemprop="name headline">{{ post.title }}</h1></a>
-          <p class="post-meta"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%b %-d, %Y" }}</time>{% if post.author %}{% assign author = site.data.authors[post.author] %} • {{ author.name }}{% endif %}</p>
+        <header class="post--header">
+          <a href="{{post.url}}"><h1 class="post--title" itemprop="name headline">{{ post.title }}</h1></a>
+          <p class="post--meta"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%b %-d, %Y" }}</time>{% if post.author %}{% assign author = site.data.authors[post.author] %} • {{ author.name }}{% endif %}</p>
         </header>
 
-        <div class="post-content" itemprop="articleBody">
+        <div class="post--content">
           {{ post.excerpt }}
         </div>
+
+        {% unless post.skip_excerpt %}
+          <div class="post--read-more">
+            <a href="{{post.url}}">Read More...</a>
+          </div>
+        {% endunless %}
 
       </article>
 

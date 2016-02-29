@@ -7,10 +7,11 @@
   <a class="header--title" href="{{ site.baseurl }}/">{{ site.title }}</a>
 
   <nav class="header--nav">
-    {% for my_page in site.pages %}
-      {% if my_page.title %}
-      <a class="header--nav-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
-      {% endif %}
+    {% for nav_element in site.data.nav %}
+      <a class="header--nav-link" href="{{ nav_element.url | prepend: site.baseurl }}">{{ nav_element.title }}</a>
+      {% unless forloop.last %}
+        <span class='bullet'>&bull;</span>
+      {% endunless %}
     {% endfor %}
   </nav>
 
