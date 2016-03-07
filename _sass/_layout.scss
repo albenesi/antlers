@@ -60,7 +60,7 @@
  * Posts
  */
 .post {
-    padding: $spacing_unit calc(#{$spacing_unit} * 2);
+    padding: $spacing_unit;
     background-color: $color_post_background;
     margin: 0 0 $spacing_unit 0;
     font-size: 1.8rem;
@@ -70,6 +70,7 @@
     }
     @include media-query($bp_large) {
         margin: 0 0 $spacing_unit;
+        padding: $spacing_unit calc(#{$spacing_unit} * 2);
     }
 }
 
@@ -94,6 +95,53 @@
 }
 
 .post--read-more {
+    text-align: center;
+    font-size: 1.4rem;
+    font-style: italic;
+    @include media-query($bp_medium) {
+        font-size: 1.8rem;
+    }
+}
+
+
+/**
+ * Archive
+ */
+.archive {
+    padding: $spacing_unit;
+    background-color: $color_post_background;
+    font-size: 1.8rem;
+    @include media-query($bp_medium) {
+        font-size: 2.4rem;
+        margin: 0 $spacing_unit $spacing_unit;
+    }
+    @include media-query($bp_large) {
+        margin: 0 0 $spacing_unit;
+        padding: $spacing_unit calc(#{$spacing_unit} * 2);
+    }
+}
+
+.archive--title {
+    font-size: 2.4rem;
+    margin-bottom: 0;
+    @include media-query($bp_medium) {
+        font-size: 3.2rem;
+    }
+}
+
+.archive--header {
+    text-align: center;
+}
+
+.archive--meta {
+    font-style: italic;
+    font-size: 1.4rem;
+    @include media-query($bp_medium) {
+        font-size: 1.8rem;
+    }
+}
+
+.archive--read-more {
     text-align: center;
     font-size: 1.4rem;
     font-style: italic;

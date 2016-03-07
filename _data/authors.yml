@@ -1,3 +1,7 @@
-frank:
-  name: Frank Albenesius
-  twitter: alberknocker
+# Remember to create the author page under the /author folder
+list: ['frank']
+data:
+  frank:
+    url: frank
+    name: Frank Albenesius
+    twitter: alberknocker

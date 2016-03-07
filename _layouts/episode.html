@@ -1,0 +1,18 @@
+---
+layout: default
+---
+
+<div class="episode post">
+    <h2>{{page.podcast}} {{page.number}}. {{page.title}}</h2>
+
+    {{ content }}
+
+    <audio controls>
+        <source src="{{ page.asset_link}}" type="audio/mp3">
+        Sorry, your browser does not support the <code>audio</code> element.
+    </audio>
+    <br/>
+    <br/>
+    {% assign date = page.date %}{% if page.recorded %}{% assign date = page.recorded %}{% endif %}
+    <div class="icon-mic"><strong>Recorded:</strong> <em>{{date | date: "%-d %B %Y"}}</em></div>
+</div>

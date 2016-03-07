@@ -1,3 +1,13 @@
 _site/
 .sass-cache/
 .jekyll-metadata
+bower_components
+node_modules
+_site
+_audio
+_tpn
+dist
+.bundle
+_gems
+_s3_logs
+report.html

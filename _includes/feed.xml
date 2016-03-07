@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"
+     xmlns:content="http://purl.org/rss/1.0/modules/content/"
+     xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:atom="http://www.w3.org/2005/Atom"
+     xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+     xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+     xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+     xmlns:media="http://search.yahoo.com/mrss/">
+    <channel>
+        <title>{{page.title}}</title>
+        <atom:link href="{{site.base_url}}/feed.xml" rel="self" type="application/rss+xml" />
+        <link>{{site.base_url}}</link>
+        <description>{{page.description}}</description>
+        <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
+        <sy:updatePeriod>hourly</sy:updatePeriod>
+        <sy:updateFrequency>1</sy:updateFrequency>
+        <language>en</language>
+        <copyright>Copyright © {{site.title}}</copyright>
+        <managingEditor>{{site.author.email}} ({{ site.author.name }})</managingEditor>
+        <webMaster>{{site.author.email}} ({{ site.author.name }})</webMaster>
+
+        <itunes:new-feed-url>{{site.base_url}}/feed/tpn.xml</itunes:new-feed-url>
+        <itunes:subtitle>{{page.description}}</itunes:subtitle>
+        <itunes:summary>{{page.description}}</itunes:summary>
+        <itunes:keywords></itunes:keywords>
+        <itunes:category text="Technology">
+            <itunes:category text="Tech News" />
+        </itunes:category>
+        <itunes:category text="Science &amp; Medicine" />
+        <itunes:category text="TV &amp; Film" />
+        <itunes:author>{{site.author.name}}</itunes:author>
+        <itunes:owner>
+            <itunes:name>{{site.author.name}}</itunes:name>
+            <itunes:email>{{site.author.email}}</itunes:email>
+        </itunes:owner>
+        <itunes:block>no</itunes:block>
+        <itunes:explicit>no</itunes:explicit>
+        <itunes:image href="{{site.base_url}}/img/logo_feed.png" />
+
+        {% for episode in site.categories.podcast-tpn %}
+        <item>
+            <link>{{site.base_url}}{{ episode.url }}</link>
+            <title>{{ episode.number}}. {{ episode.title }}</title>
+            <pubDate>{{ episode.date | date_to_rfc822 }}</pubDate>
+            <description>{{'<![CDATA['}}{{ episode.short_description }}{{']]>'}}</description>
+
+            <enclosure url="{{ episode.asset_link | xml_escape }}" length="{{ episode.length }}" type="audio/mpeg" />
+            <guid>{{ episode.asset_link | xml_escape }}</guid>
+
+            <itunes:author>{{site.author.name}}</itunes:author>
+            <itunes:summary>{{ episode.content | strip_html | xml_escape }}</itunes:summary>
+            <itunes:image href="{{ site.base_url }}{{episode.img_src }}" />
+            <itunes:duration>{{ episode.duration }}</itunes:duration>
+            <itunes:keywords>{{ episode.tags | join:', ' }}</itunes:keywords>
+        </item>
+        {% endfor %}
+    </channel>
+</rss>

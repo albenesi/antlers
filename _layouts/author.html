@@ -1,0 +1,22 @@
+---
+layout: default
+---
+{% assign author = site.data.authors.data[page.author] %}
+<div class="archive">
+
+  <header class="post--header">
+    <h1 class="post--title">{{ author.name }}</h1>
+  </header>
+
+  <div class="archive--list">
+    {% for post in site.posts %}
+      {% if post.author == page.author %}
+        <header class="archive--header">
+          <a href="{{post.url}}"><h1 class="archive--title" itemprop="name headline">{{ post.title }}</h1></a>
+          <p class="archive--meta"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%b %-d, %Y" }}</time> • {{ author.name }}</p>
+        </header>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+</div>

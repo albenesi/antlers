@@ -5,22 +5,24 @@ layout: default
 <div class="home">
 
   <div class="post--list">
-    {% for post in site.posts limit:10%}
+    {% for post in site.posts limit:10 %}
 
       <article class="post excerpt">
 
         <header class="post--header">
-          <a href="{{post.url}}"><h1 class="post--title" itemprop="name headline">{{ post.title }}</h1></a>
-          <p class="post--meta"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%b %-d, %Y" }}</time>{% if post.author %}{% assign author = site.data.authors[post.author] %} • {{ author.name }}{% endif %}</p>
+          <a href="{{post.url}}"><h1 class="post--title" itemprop="name headline">{% if post.podcast %}{{ post.podcast }} {{post.number}}. {% endif %}{{ post.title }}</h1></a>
+          <p class="post--meta"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%b %-d, %Y" }}</time>{% if post.author %}{% assign author = site.data.authors.data[post.author] %} • <a href='/author/{{author.url}}.html'>{{ author.name }}</a>{% endif %}</p>
         </header>
 
         <div class="post--content">
           {{ post.excerpt }}
         </div>
 
-        {% unless post.skip_excerpt %}
+        {% unless post.skip_excerpt or post.categories contains 'comic'%}
           <div class="post--read-more">
-            <a href="{{post.url}}">Read More...</a>
+            {% assign continue = "Read More..." %}
+            {% if post.continue %}{% assign continue = post.continue %}{% endif %}
+            <a href="{{post.url}}">{{continue}}</a>
           </div>
         {% endunless %}
 

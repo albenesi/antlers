@@ -88,6 +88,21 @@ li {
 
 
 /**
+ * Definition Lists
+ */
+dl {
+    dt {
+        margin-top: $spacing_unit;
+        font-weight: bold;
+    }
+    dd {
+        margin: 0 calc(2 * #{$spacing_unit});
+    }
+}
+
+
+
+/**
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {

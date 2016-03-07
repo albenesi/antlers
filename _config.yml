@@ -4,16 +4,39 @@
 # which you are expected to set up once and rarely need to edit after that.
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'jekyll serve'. If you change this file, please restart the server process.
+exclude: [
+  "node_modules",
+  "build",
+  "styles",
+  "Gemfile",
+  "Gemfile.lock",
+  "README.md",
+  "Gruntfile.js",
+  "report.html",
+  ".jscs.json",
+  ".jshintrc",
+  ".gitattributes",
+  ".gitignore",
+  "package.json"
+]
+highlighter: pygments
 
 # Site settings
 title: antlers.io
-email: frank@antlers.io
 description: > # this means to ignore newlines until "baseurl:"
   This is antlers.io.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://antlers.io" # the base hostname & protocol for your site
-twitter_username: albenesi
+twitter_username: alberknocker
 github_username:  albenesi
+
+author:
+  name: Frank Albenesius
+  email: frank@antlers.io
 
 # Build settings
 markdown: kramdown
+
+comments :
+  disqus:
+    shortname: antlersio
