@@ -13,7 +13,7 @@ permalink: /archive/
   <div class="archive--list">
     {% for post in site.posts %}
       <header class="archive--header">
-        <a href="{{post.url}}"><h1 class="archive--title" itemprop="name headline">{{ post.title }}</h1></a>
+        <a href="{{post.url}}"><h1 class="archive--title" itemprop="name headline">{% if post.podcast %}{{ post.podcast }} {{post.number}}: {% endif %}{{ post.title }}</h1></a>
         <p class="archive--meta"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%b %-d, %Y" }}</time>{% if post.author %}{% assign author = site.data.authors.data[post.author] %} • <a href='/author/{{author.url}}.html'>{{ author.name }}</a>{% endif %}</p>
       </header>
     {% endfor %}

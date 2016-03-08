@@ -1,6 +1,10 @@
 ---
 layout: null
 title: "That's Pretty Neat"
-description: "A podcast about all things neat."
+feed: tpn.xml
+description: That's Pretty Neat is a show about all things neat.
+author:
+    name: Frank Albenesius
+    email: frank@antlers.io
 ---
 {% include feed.xml %}

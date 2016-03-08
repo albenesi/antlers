@@ -10,7 +10,7 @@ layout: default
       <article class="post excerpt">
 
         <header class="post--header">
-          <a href="{{post.url}}"><h1 class="post--title" itemprop="name headline">{% if post.podcast %}{{ post.podcast }} {{post.number}}. {% endif %}{{ post.title }}</h1></a>
+          <a href="{{post.url}}"><h1 class="post--title" itemprop="name headline">{% if post.podcast %}{{ post.podcast }} {{post.number}}: {% endif %}{{ post.title }}</h1></a>
           <p class="post--meta"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%b %-d, %Y" }}</time>{% if post.author %}{% assign author = site.data.authors.data[post.author] %} • <a href='/author/{{author.url}}.html'>{{ author.name }}</a>{% endif %}</p>
         </header>
 

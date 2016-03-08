@@ -10,24 +10,22 @@
      xmlns:media="http://search.yahoo.com/mrss/">
     <channel>
         <title>{{page.title}}</title>
-        <atom:link href="{{site.base_url}}/feed.xml" rel="self" type="application/rss+xml" />
-        <link>{{site.base_url}}</link>
-        <description>{{page.description}}</description>
+        <atom:link href="{{site.url}}/feed/tpn.xml" rel="self" type="application/rss+xml" />
+        <link>{{site.url}}</link>
+        <description>{{site.description}}</description>
         <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
         <sy:updatePeriod>hourly</sy:updatePeriod>
         <sy:updateFrequency>1</sy:updateFrequency>
-        <language>en</language>
+        <language>en-us</language>
         <copyright>Copyright © {{site.title}}</copyright>
         <managingEditor>{{site.author.email}} ({{ site.author.name }})</managingEditor>
         <webMaster>{{site.author.email}} ({{ site.author.name }})</webMaster>
 
-        <itunes:new-feed-url>{{site.base_url}}/feed/tpn.xml</itunes:new-feed-url>
-        <itunes:subtitle>{{page.description}}</itunes:subtitle>
-        <itunes:summary>{{page.description}}</itunes:summary>
+        <itunes:new-feed-url>{{site.url}}/feed/{{site.feed}}</itunes:new-feed-url>
+        <itunes:subtitle>{{site.description}}</itunes:subtitle>
+        <itunes:summary>{{site.description}}</itunes:summary>
         <itunes:keywords></itunes:keywords>
-        <itunes:category text="Technology">
-            <itunes:category text="Tech News" />
-        </itunes:category>
+        <itunes:category text="Technology"/>
         <itunes:category text="Science &amp; Medicine" />
         <itunes:category text="TV &amp; Film" />
         <itunes:author>{{site.author.name}}</itunes:author>
@@ -37,12 +35,12 @@
         </itunes:owner>
         <itunes:block>no</itunes:block>
         <itunes:explicit>no</itunes:explicit>
-        <itunes:image href="{{site.base_url}}/img/logo_feed.png" />
+        <itunes:image href="{{site.url}}/img/tpn/tpn1.png" />
 
         {% for episode in site.categories.podcast-tpn %}
         <item>
-            <link>{{site.base_url}}{{ episode.url }}</link>
-            <title>{{ episode.number}}. {{ episode.title }}</title>
+            <link>{{site.url}}{{ episode.url }}</link>
+            <title>{{ episode.number}}: {{ episode.title }}</title>
             <pubDate>{{ episode.date | date_to_rfc822 }}</pubDate>
             <description>{{'<![CDATA['}}{{ episode.short_description }}{{']]>'}}</description>
 
@@ -51,7 +49,7 @@
 
             <itunes:author>{{site.author.name}}</itunes:author>
             <itunes:summary>{{ episode.content | strip_html | xml_escape }}</itunes:summary>
-            <itunes:image href="{{ site.base_url }}{{episode.img_src }}" />
+            <itunes:image href="{{ site.url }}{{episode.img_src }}" />
             <itunes:duration>{{ episode.duration }}</itunes:duration>
             <itunes:keywords>{{ episode.tags | join:', ' }}</itunes:keywords>
         </item>
