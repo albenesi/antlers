@@ -12,7 +12,7 @@
         <title>{{page.title}}</title>
         <atom:link href="{{site.url}}/feed/tpn.xml" rel="self" type="application/rss+xml" />
         <link>{{site.url}}</link>
-        <description>{{site.description}}</description>
+        <description>{{page.description}}</description>
         <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
         <sy:updatePeriod>hourly</sy:updatePeriod>
         <sy:updateFrequency>1</sy:updateFrequency>
@@ -21,9 +21,9 @@
         <managingEditor>{{site.author.email}} ({{ site.author.name }})</managingEditor>
         <webMaster>{{site.author.email}} ({{ site.author.name }})</webMaster>
 
-        <itunes:new-feed-url>{{site.url}}/feed/{{site.feed}}</itunes:new-feed-url>
-        <itunes:subtitle>{{site.description}}</itunes:subtitle>
-        <itunes:summary>{{site.description}}</itunes:summary>
+        <itunes:new-feed-url>{{site.url}}/feed/{{page.feed}}</itunes:new-feed-url>
+        <itunes:subtitle>{{page.description}}</itunes:subtitle>
+        <itunes:summary>{{page.description}}</itunes:summary>
         <itunes:keywords></itunes:keywords>
         <itunes:category text="Technology"/>
         <itunes:category text="Science &amp; Medicine" />
@@ -42,13 +42,13 @@
             <link>{{site.url}}{{ episode.url }}</link>
             <title>{{ episode.number}}: {{ episode.title }}</title>
             <pubDate>{{ episode.date | date_to_rfc822 }}</pubDate>
-            <description>{{'<![CDATA['}}{{ episode.short_description }}{{']]>'}}</description>
+            <description>{{'<![CDATA['{{ episode.short_description }}']]>'}}</description>
 
             <enclosure url="{{ episode.asset_link | xml_escape }}" length="{{ episode.length }}" type="audio/mpeg" />
             <guid>{{ episode.asset_link | xml_escape }}</guid>
 
             <itunes:author>{{site.author.name}}</itunes:author>
-            <itunes:summary>{{ episode.content | strip_html | xml_escape }}</itunes:summary>
+            <itunes:summary>{{episode.content | strip_html | xml_escape }}</itunes:summary>
             <itunes:image href="{{ site.url }}{{episode.img_src }}" />
             <itunes:duration>{{ episode.duration }}</itunes:duration>
             <itunes:keywords>{{ episode.tags | join:', ' }}</itunes:keywords>
