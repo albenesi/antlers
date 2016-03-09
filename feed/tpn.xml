@@ -3,6 +3,7 @@ layout: null
 title: "That's Pretty Neat"
 feed: tpn.xml
 description: That's Pretty Neat is a show about all things neat.
+img: tpn/tpn2.png
 author:
     name: Frank Albenesius
     email: frank@antlers.io
