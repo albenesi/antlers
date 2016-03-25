@@ -15,8 +15,6 @@ dl, dd, ol, ul, figure {
     box-sizing: inherit;
 }
 
-
-
 /**
  * Basic styling
  */
@@ -34,18 +32,6 @@ body {
     font-kerning: normal;
 }
 
-
-
-
-/**
- * p
- */
-p {
-    text-indent: 1em;
-}
-
-
-
 /**
  * Set `margin-bottom` to maintain vertical rhythm
  */
@@ -56,8 +42,6 @@ ul, ol, dl, figure,
     margin-bottom: $spacing_unit / 2;
 }
 
-
-
 /**
  * Images
  */
@@ -65,8 +49,6 @@ img {
     max-width: 100%;
     vertical-align: middle;
 }
-
-
 
 /**
  * Figures
@@ -78,8 +60,6 @@ figure > img {
 figcaption {
     font-size: $small_font_size;
 }
-
-
 
 /**
  * Lists
@@ -95,8 +75,6 @@ li {
     }
 }
 
-
-
 /**
  * Definition Lists
  */
@@ -110,8 +88,6 @@ dl {
     }
 }
 
-
-
 /**
  * Headings
  */
@@ -119,8 +95,6 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: $base_font_weight;
     font-family: $alt_font_family;
 }
-
-
 
 /**
  * Links
@@ -137,8 +111,6 @@ a {
         text-decoration: underline;
     }
 }
-
-
 
 /**
  * Blockquotes
@@ -164,8 +136,6 @@ blockquote {
         // padding: $spacing_unit calc(#{$spacing_unit} * 2);
     }
 }
-
-
 
 /**
  * Code formatting
@@ -193,8 +163,6 @@ pre {
     }
 }
 
-
-
 /**
  * Wrapper
  */
@@ -214,8 +182,6 @@ pre {
     // }
 }
 
-
-
 /**
  * Clearfix
  */
@@ -227,8 +193,6 @@ pre {
         clear: both;
     }
 }
-
-
 
 /**
  * Icons
