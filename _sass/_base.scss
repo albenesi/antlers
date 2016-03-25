@@ -123,6 +123,7 @@ blockquote {
     letter-spacing: -1px;
     font-style: italic;
     font-family: $base_font_family;
+    margin-top: $spacing_unit;
     > :last-child {
         margin-bottom: 0;
     }
