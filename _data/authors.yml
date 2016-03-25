@@ -5,3 +5,6 @@ data:
     url: frank
     name: Frank Albenesius
     twitter: alberknocker
+  cornelius:
+    url: cornelius
+    name: Cornelius von Goddard

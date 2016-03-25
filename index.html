@@ -5,7 +5,7 @@ layout: default
 <div class="home">
 
   <div class="post--list">
-    {% for post in site.posts limit:10 %}
+    {% for post in site.posts limit:5 %}
 
       <article class="post excerpt">
 
@@ -29,6 +29,7 @@ layout: default
       </article>
 
     {% endfor %}
+    <a class='more-posts' href="/archive">More Posts...</a>
   </div>
 
 </div>
