@@ -30,6 +30,8 @@ url: "http://antlers.io" # the base hostname & protocol for your site
 twitter_username: alberknocker
 github_username:  albenesi
 
+avatar: /img/thumbnail.png
+
 author:
   name: Frank Albenesius
   email: frank@antlers.io

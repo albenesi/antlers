@@ -15,6 +15,9 @@ layout: default
         </header>
 
         <div class="post--content">
+          {% if post.thumbnail %}
+            <img src='{{post.thumbnail}}'>
+          {% endif %}
           {{ post.excerpt }}
         </div>
 
