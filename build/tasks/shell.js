@@ -15,7 +15,7 @@ module.exports = function(grunt) {
             command: 'aws --profile antlers s3 sync _tpn/ s3://tpn.antlers.io --include \'*\' --acl \'public-read\''
         },
         download_report: {
-            command: 'aws --profile antlers s3 sync s3://logs-antlers ./_s3_logs && ' +
+            command: 'aws --profile antlers s3 sync s3://tpn.antlers.io/logs ./_s3_logs && ' +
               'bundle exec request-log-analyzer -f amazon_s3 --output html --file report.html _s3_logs'
         }
     });
