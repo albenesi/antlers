@@ -10,7 +10,7 @@ asset_link: "http://tpn.antlers.io/2_2.mp3"
 comments: true
 date: 2016-04-08
 continue: "Listen In..."
-img_src: "/img/tpn/tpn1.png"
+img_src: "/img/tpn/tpn2.png"
 tags: [neat]
 disqus_identifier: tpn2_2
 ---
