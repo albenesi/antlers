@@ -1,5 +1,5 @@
 # Remember to create the author page under the /author folder
-list: ['frank']
+list: ['frank', 'cornelius']
 data:
   frank:
     url: frank
