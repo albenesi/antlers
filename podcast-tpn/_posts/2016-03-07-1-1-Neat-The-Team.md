@@ -13,6 +13,7 @@ released: 2015-05-22
 continue: "Listen In..."
 img_src: "/img/tpn/tpn1.png"
 tags: [neat]
+disqus_identifier: tpn1_1
 ---
 
 In Episode 1, the gang tests their radio-chops as they make their TPN debut. The format was explained, topics (product placement, driverless cars, and relocated sporting events) were introduced.

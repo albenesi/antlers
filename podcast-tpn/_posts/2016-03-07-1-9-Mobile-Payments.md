@@ -13,6 +13,7 @@ released: 2015-07-22
 continue: "Listen In..."
 img_src: "/img/tpn/tpn1.png"
 tags: [neat]
+disqus_identifier: tpn1_9
 ---
 
 In Episode 9, the brochachos discuss Mobile Payments, Frequent Flyers, & Board Games.

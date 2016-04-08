@@ -13,6 +13,7 @@ released: 2015-06-10
 continue: "Listen In..."
 img_src: "/img/tpn/tpn1.png"
 tags: [neat]
+disqus_identifier: tpn1_4
 ---
 
 In Episode 4, the pals discuss Sleep, Best Selling Video Games, & The Fermi Paradox. We also answer a fan question and play some Phobia Trivia.

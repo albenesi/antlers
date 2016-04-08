@@ -12,6 +12,7 @@ date: 2016-04-01
 continue: "Listen In..."
 img_src: "/img/tpn/tpn1.png"
 tags: [neat]
+disqus_identifier: tpn2_1
 ---
 
 In Season 2: Episode 1, Frank, Zach and Tony discuss Politics and Elections.

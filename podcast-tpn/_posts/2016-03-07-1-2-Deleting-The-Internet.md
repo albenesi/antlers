@@ -13,6 +13,7 @@ released: 2015-05-29
 continue: "Listen In..."
 img_src: "/img/tpn/tpn1.png"
 tags: [neat]
+disqus_identifier: tpn1_2
 ---
 
 In Episode 2, the fellas discuss deleting things from the internet, Legos, and live streaming. We also have our first listener question from our pal Travis along with another round of Sports With Frank.

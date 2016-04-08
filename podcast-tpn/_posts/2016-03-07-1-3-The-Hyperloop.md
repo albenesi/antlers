@@ -13,6 +13,7 @@ released: 2015-06-05
 continue: "Listen In..."
 img_src: "/img/tpn/tpn1.png"
 tags: [neat]
+disqus_identifier: tpn1_3
 ---
 
 In Episode 3, the dudes discuss The Hyperloop, Stenography, & Defining a Sport. We answer some questions from our Facebook Fan Page and play a game of Worst Case/Best Case.

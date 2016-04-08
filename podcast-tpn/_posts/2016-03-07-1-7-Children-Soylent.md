@@ -13,6 +13,7 @@ released: 2015-07-01
 continue: "Listen In..."
 img_src: "/img/tpn/tpn1.png"
 tags: [neat]
+disqus_identifier: tpn1_7
 ---
 
 In Episode 7, the pals discuss Children, Soylent, & Podcasts.

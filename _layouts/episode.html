@@ -19,3 +19,5 @@ layout: default
     {% assign date = page.date %}{% if page.released %}{% assign date = page.released %}{% endif %}
     <div class="icon-mic"><strong>Released:</strong> <em>{{date | date: "%-d %B %Y"}}</em></div>
 </div>
+
+{% include disqus.html %}

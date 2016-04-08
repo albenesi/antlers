@@ -13,6 +13,7 @@ released: 2015-07-16
 continue: "Listen In..."
 img_src: "/img/tpn/tpn1.png"
 tags: [neat]
+disqus_identifier: tpn1_8
 ---
 
 In Episode 8, the pals discuss Asteroid Mining, Neater MPGs, & Laughter.

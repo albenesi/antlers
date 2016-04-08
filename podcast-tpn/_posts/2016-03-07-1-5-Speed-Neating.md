@@ -13,6 +13,7 @@ released: 2015-06-17
 continue: "Listen In..."
 img_src: "/img/tpn/tpn1.png"
 tags: [neat]
+disqus_identifier: tpn1_5
 ---
 
 In Episode 5, the boys participate in the first ever Speed-Neating! In this rapidfire setting, we limit ourselves to two minutes per listener submitted topic. This podcast was also the first recorded with all three hosts in the same room, so you might experience a bit more echo than normal.
